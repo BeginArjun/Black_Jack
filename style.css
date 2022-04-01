@@ -1,0 +1,35 @@
+body{
+    font-size:20px;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    background:radial-gradient(circle,green,rgb(15, 138, 15),rgb(53, 214, 53));
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color:goldenrod;
+}
+.message{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:20px;
+    font-style: italic;
+}
+#cards-sum{
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.btn
+{
+    background-color: goldenrod;
+    border: none;
+    border-radius: 2px;
+    color: #016f32;
+    width:150px;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+.btn:hover{
+    background-color:rgb(214, 172, 66);
+}
