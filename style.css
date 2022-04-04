@@ -33,3 +33,10 @@ h1{
 .btn:hover{
     background-color:rgb(214, 172, 66);
 }
+#name{
+    width:550px;
+    border: 2px solid goldenrod;
+    text-align: center;
+    height:20px;
+    margin-bottom: 12px;
+}

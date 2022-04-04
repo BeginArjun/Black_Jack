@@ -1,13 +1,23 @@
 let firstCard=0
 let secondCard=0
 
+
 let playerDetails={
-    name:"Arjun Sharma",
-    credits:200,
-    id:Math.random()*1213
+    name: "",
+    credits:0,
+    id:0
 }
-
-
+const inputVal=document.getElementById("name")
+const inputBtn=document.getElementById("name-btn")
+inputBtn.addEventListener("click",function()
+{
+    playerDetails={
+        name: inputVal.value,
+        credits:200,
+        id:Math.random()*1213
+    }
+}
+)
 let cards = []
 
 let sum=0
@@ -70,19 +80,16 @@ function renderGame()
     else if (sum === 21) {
         message = "Hurray! You've Got BlackJack!"
         hasBlackJack = true
-        playerDetails.credits+=50
         checkGame()
     }
     else {
         message = "Out of The Game!"
         isAlive = false
-        playerDetails.credits-=50
         checkGame()
     }
     console.log("Button Clicked...")
     messageEl.textContent=message
 }
-
 function checkGame()
 {
     if(isAlive === true && hasBlackJack === false)
@@ -94,8 +101,6 @@ function checkGame()
     {
         console.log(hasBlackJack)
         let playAgain=document.getElementById("game-btn")
-        let greet=document.getElementById("message-el")
-        greet.textContent += "Congrats!"+" "+playerDetails.name
         playAgain.innerHTML = `
                                <button id="restart" class ="btn" onclick=document.location.reload()>PLAY AGAIN</button>`
     }
