@@ -11,15 +11,17 @@
             <input id="name" type="text" required>
             <button id="name-btn" class="btn">SUBMIT</button>
         </div>
-        <p id="message-el" class="message">Want to Play A Round ?</p>
-        <div id="cards-sum">
-            <p id="cards-el">Cards: </p>
-            <p id="sum-el">Sum: </p>
+        <div id="mainContent">
+            <p id="message-el" class="message">Want to Play A Round ?</p>
+            <div id="cards-sum">
+                <p id="cards-el">Cards: </p>
+                <p id="sum-el">Sum: </p>
+            </div>
+            <div id="game-btn">
+                <button id="start" onclick="startGame()" class="btn">START</button>
+            </div>
+            <p id="player-el" class="message"></p>
         </div>
-        <div id="game-btn">
-            <button id="start" onclick="startGame()" class="btn">START</button>
-        </div>
-        <p id="player-el" class="message"></p>
         <script src="index.js"></script>
     </body>
 </html>
