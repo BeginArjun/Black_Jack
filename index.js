@@ -1,31 +1,22 @@
+//Initializing Variables
 let firstCard=0
 let secondCard=0
-
-
+//Player Details Object
 let playerDetails={
     name: "",
     credits:0,
     id:0
 }
+// getElementById() for form element
+let inputForm=document.getElementById("playerInput")
 const inputVal=document.getElementById("name")
 const inputBtn=document.getElementById("name-btn")
-inputBtn.addEventListener("click",function()
-{
-    playerDetails={
-        name: inputVal.value,
-        credits:200,
-        id:Math.random()*1213
-    }
-}
-)
+const main_Content=document.getElementById("mainContent")
+
 let cards = []
-
 let sum=0
-
 let hasBlackJack=false
-
 let isAlive=false
-
 let message=""
 
 let messageEl=document.getElementById('message-el')
@@ -34,6 +25,31 @@ let messageEl=document.getElementById('message-el')
 let sumEl=document.querySelector("#sum-el")
 
 let cardsEl=document.querySelector("#cards-el")
+/*  OnClick input form is not visible.
+    playerDetails is set
+    mainContent is visible
+*/
+inputBtn.addEventListener("click",function()
+{
+    // Validates whether input is empty or not
+    if(inputVal.value != '')
+    {
+        playerDetails={
+            name: inputVal.value,
+            credits:200,
+            id:Math.random()*1213
+        }
+        inputForm.style.display="none"
+        main_Content.style.display="block"
+    }
+    //Error Handling
+    else
+    {
+        inputVal.style.border="5px solid red"
+        inputVal.placeholder="Input Cannot be Empty"
+    }
+}
+)
 
 function getrandomCard()
 {
